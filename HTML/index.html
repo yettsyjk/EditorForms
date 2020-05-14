@@ -49,10 +49,22 @@
 
   <!--Editor-->
     <h2>Editor</h2>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Upload</span>
+      </div>
+      <div class="custom-file">
+        <input type="text" id="filename" class="custom-file-input" placeholder="Enter Name"/>
 
-    <input type="text" id="filename" class="form-control m2- ml-4" placeholder="Enter Name"/>
+        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+      </div>
+    </div>
 
-    <button id="export" class="form-control bg-success position-relative mx-auto">Export AS PDF</button>
+    <div class="input-group-append">
+      <button type="button" id="export" class="btn btn-outline-secondary">Export AS PDF</button>
+      
+     </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
