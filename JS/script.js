@@ -1,15 +1,15 @@
-const convertFile = new showdown.Converter({simplifiedAutoLink: true})
-const pdf = new jsPDF();
+let convertFile = new showdown.Converter({simplifiedAutoLink: true})
+
 
 convertFile.getOption({simplifiedAutoLink: true})
-
+//Ajax JQuery
 $('#editor').keyup(function() {
   $('#output').html(converter.makeHtml($(this).val()))
 })
-
-
+let pdf = new jsPDF();
+//Ajax JQuery
 $('#export').click(async function() {
-  htmlToPdf($('#output').html(), {
+  html2pdfPdf($('#output').html(), {
     filename: $('#fiename').val() || 'markdown', margin: 10
   })
 })

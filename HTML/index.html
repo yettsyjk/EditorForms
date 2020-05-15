@@ -14,13 +14,21 @@
       <link id="favicon" type="image/x-icon" rel="icon" href="https://img.icons8.com/ios-filled/2x/circled-y.png">
       <link rel="icon" id="favicon256" sizes"256x256" type="image/png" href="https://img.icons8.com/ios-filled/2x/circled-y.png">
       <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/6/common.js"></script>
+      <link rel="stylesheet" href="/CSS/style.css">
+      <title>Yettsy Jo Knapp | File Editor</title>
       <!--FONTS-->
       <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Raleway|Spartan&display=swap" rel="stylesheet">
       <script async type="text/javascript" src="js/bulma.js"></script>
+
+<!--followed Dandy Cheng to understand AJAX-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
       <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Yettsy Jo Knapp | Javascript Editor</title>
+
   </head>
   <body>
 
@@ -69,19 +77,18 @@
 <div class="container">
   <!--Editor-->
   <h1 class="pl-4 pt-4">Markdown Editor</h1>
-   <input type="text" id="filename" class="form-control m-2 ml-4" autovomplete="off" placeholder="Enter a file name">
-   <section class="w-100 h-75 container d-flex pl-3 pr-3">
-       <div class="h-100">
-           <h3>Output</h3>
-           <div id="output" class="w-100 h-100 rounded p-2"></div>
-       </div>
-       <div id="editor-wrap" class="h-100 pr-0 ml-2 position-relative">
-           <h3>Editor</h3>
-           <textarea id="editor" class="h-100 form-control"></textarea>
-       </div>
-   </section>
-   <button id="export" class="form-control bg-success position-relative mb-2 mx-auto">Export as PDF</button>
-    </div>
+    <input type="text" id="filename" class="form-control m-2 ml-4" placeholder="Enter a file name">
+    <section class="w-100 h-75 container d-flex pl-3 pr-3">
+        <div class="h-100">
+            <h3>Output</h3>
+            <div id="output" class="w-100 h-100 rounded p-2"></div>
+        </div>
+        <div id="editor-wrap" class="h-100 pr-0 ml-2 position-relative">
+            <h3>Editor</h3>
+            <textarea id="editor" class="h-100 form-control"></textarea>
+        </div>
+    </section>
+    <button id="export" class="form-control bg-primary position-relative mb-2 mx-auto">Export as PDF</button>
 </div>
 
 

@@ -5,6 +5,33 @@
 h1, h2, h3 {
   font-family: 'Nanum Gothic Coding', monospace;
 }
+
+
+
+button{
+  color: #fff !important;
+}
+section>div {
+  width: 50%;
+}
+#filename{
+  width: 30%;
+}
+#editor  {
+  width:100%;
+  height: 100%;
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+#output {
+  font-family: 'Nanum Gothic Coding', monospace;
+  overflow: auto;
+  font-weight: 250 !important;
+}
+#export {
+  z-index: 2;
+  top: 4rem;
+  width: 15%;
+}
 .footer{
 background-color: #222831;
 color: lemonchiffon;
@@ -19,3 +46,31 @@ color: lemonchiffon;
 
 ::selection
 {background-color:#DEF4FF}
+
+/*Media*/
+@media screen and (max-width:1000px) {
+    #filename {
+        width: calc(100% - 4rem);
+        margin:0 2rem 0 2rem !important
+    }
+    section {
+        padding: 0 !important;
+        flex-direction: column;
+        align-items: center;
+    }
+    section>div {
+        width: 100% !important;
+    }
+    #editor-wrap {
+        top: 3rem;
+        margin-left: 0 !important;
+    }
+    section>div {
+        width: 50%;
+        max-height: 50%;
+    }
+    #export {
+        top: 7rem;
+        width: 40%;
+    }
+}
